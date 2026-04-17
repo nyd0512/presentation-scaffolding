@@ -625,23 +625,26 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
 <!-- GitHub README for Human/Agent (leader deck lift, dev 재맥락화) -->
 <div class="slide">
   <h3>이미 일어난 변화 &mdash; GitHub README가 사람과 에이전트용으로 분기</h3>
-  <div class="two-col" style="max-width:980px; align-items:center; margin-top:3vh; gap:3vw;">
-    <div class="col" style="flex:1; display:flex; flex-direction:column; gap:16px;">
-      <div style="border:1px solid rgba(255,255,255,0.08); border-left:3px solid rgba(255,255,255,0.25); border-radius:4px; padding:22px 24px;">
-        <h4 style="color:rgba(255,255,255,0.6); font-size:0.95rem; margin-bottom:8px; letter-spacing:0.08em;">For Humans</h4>
-        <p style="color:#D0D8E8; font-size:1rem; line-height:1.6;">"이 설치 프롬프트를 LLM 에이전트에게<br>복사해서 붙여넣으세요"</p>
+  <div class="two-col" style="max-width:1080px; align-items:center; margin-top:3vh; gap:3vw;">
+    <div class="col" style="flex:1.1; display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:center; align-items:center;">
+        <img loading="lazy" src="../assets/images/github-readme-for-human-for-agent.jpg" alt="GitHub README: For Humans / For LLM Agents" style="width:100%; max-height:46vh; object-fit:contain; border-radius:8px;" />
       </div>
-      <div style="border:1px solid rgba(52,211,153,0.25); border-left:3px solid #34d399; border-radius:4px; padding:22px 24px;">
-        <h4 style="color:#34d399; font-size:0.95rem; margin-bottom:8px; letter-spacing:0.08em;">For LLM Agents</h4>
-        <p style="color:rgba(255,255,255,0.9); font-size:1rem; line-height:1.6;"><code style="color:#22d3ee;">curl -s</code> 로 가이드를 직접 가져와<br>각자 환경에 맞춰 실행하세요</p>
-      </div>
+      <p style="text-align:center; margin-top:10px; font-size:0.78rem; color:rgba(255,255,255,0.35);">출처: GitHub &mdash; Oh My OpenCode README</p>
     </div>
-    <div class="col" style="flex:1; display:flex; flex-direction:column; gap:14px;">
-      <div style="border:1px dashed rgba(255,255,255,0.14); border-radius:6px; padding:22px; background:rgba(255,255,255,0.02);">
-        <p style="color:rgba(255,255,255,0.85); font-size:1rem; line-height:1.7;">"사람이 직접 설치하면 오타낸다.<br>에이전트한테 시켜라."</p>
-        <p style="color:rgba(255,255,255,0.5); font-size:0.8rem; margin-top:8px;">&mdash; Oh My OpenCode README</p>
+    <div class="col" style="flex:1; display:flex; flex-direction:column; gap:12px;">
+      <div style="border:1px solid rgba(255,255,255,0.08); border-left:3px solid rgba(255,255,255,0.25); border-radius:4px; padding:18px 22px;">
+        <h4 style="color:rgba(255,255,255,0.6); font-size:0.92rem; margin-bottom:6px; letter-spacing:0.08em;">For Humans</h4>
+        <p style="color:#D0D8E8; font-size:0.95rem; line-height:1.55;">"이 설치 프롬프트를 LLM 에이전트에게<br>복사해서 붙여넣으세요"</p>
       </div>
-      <p class="sub" style="margin-top:0; font-size:clamp(1rem,1.3vw,1.15rem); text-align:left;">문서의 독자가 <span class="em">사람만이 아닌 것</span>은 이미 오픈소스에 반영된 현실</p>
+      <div style="border:1px solid rgba(52,211,153,0.25); border-left:3px solid #34d399; border-radius:4px; padding:18px 22px;">
+        <h4 style="color:#34d399; font-size:0.92rem; margin-bottom:6px; letter-spacing:0.08em;">For LLM Agents</h4>
+        <p style="color:rgba(255,255,255,0.9); font-size:0.95rem; line-height:1.55;"><code style="color:#22d3ee;">curl -s</code> 로 가이드를 직접 가져와<br>각자 환경에 맞춰 실행하세요</p>
+      </div>
+      <div style="border:1px dashed rgba(255,255,255,0.14); border-radius:6px; padding:16px 22px; background:rgba(255,255,255,0.02);">
+        <p style="color:rgba(255,255,255,0.85); font-size:0.92rem; line-height:1.6;">"사람이 직접 설치하면 오타낸다. 에이전트한테 시켜라."</p>
+      </div>
+      <p class="sub" style="margin-top:2px; font-size:clamp(0.92rem,1.2vw,1.08rem); text-align:left;">문서의 독자가 <span class="em">사람만이 아닌 것</span>은 이미 오픈소스의 현실</p>
     </div>
   </div>
 </div>
@@ -1312,7 +1315,7 @@ OAuth 로그인 또는 API 키
   <div class="arch-layers" style="margin-top:2vh;">
     <div class="arch-layer"><div class="role" style="color:#22d3ee;">Global</div><div class="brand"><code style="color:#22d3ee;">~/.claude/CLAUDE.md</code></div><div class="desc" style="color:rgba(255,255,255,0.7);">모든 프로젝트 공통 (언어·스타일·협업 원칙)</div></div>
     <div class="arch-layer"><div class="role" style="color:#22d3ee;">Project</div><div class="brand"><code style="color:#22d3ee;">&lt;repo&gt;/CLAUDE.md</code></div><div class="desc" style="color:rgba(255,255,255,0.7);">이 레포의 규칙 (빌드·테스트·컨벤션)</div></div>
-    <div class="arch-layer on"><div class="role" style="color:#22d3ee;">Local</div><div class="brand" style="color:#22d3ee;"><code style="color:#22d3ee;">CLAUDE.local.md</code></div><div class="desc" style="color:#22d3ee; font-weight:700;">개인 메모 &middot; .gitignore 대상</div></div>
+    <div class="arch-layer on"><div class="role" style="color:#22d3ee;">Local</div><div class="brand" style="color:#22d3ee;"><code style="color:#22d3ee;">.claude/settings.local.json</code></div><div class="desc" style="color:#22d3ee; font-weight:700;">개인 설정 (권한 &middot; env &middot; hook) &middot; .gitignore 대상</div></div>
   </div>
   <div class="note tip" style="margin-top:2vh;"><p>세션 시작 시 자동 로드 &mdash; <strong style="color:#22d3ee;">AI가 맥락을 찾느라 허비하는 시간</strong>을 없앤다</p></div>
 </div>
@@ -1590,6 +1593,61 @@ ExitWorktree({keepBranch:true})</pre>
   <p class="sub" style="margin-top:2vh;">남의 Harness보다 <span class="em">내가 쌓은 Harness</span> &mdash; 만드는 과정이 곧 숙련</p>
 </div>
 
+<!-- B7.1a Hooks - 이벤트 기반 자동화 -->
+<div class="slide in-cyan">
+  <h3>Hooks &mdash; 이벤트 훅으로 Claude를 길들인다</h3>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; width:100%; max-width:1040px; margin-top:2vh;">
+    <div style="border:1px solid rgba(34,211,238,0.28); border-top:3px solid #22d3ee; padding:16px 20px; border-radius:4px; background:rgba(34,211,238,0.04);">
+      <div style="color:#22d3ee; font-size:0.82rem; font-weight:700; letter-spacing:0.08em; margin-bottom:6px;">PreToolUse</div>
+      <p style="color:rgba(255,255,255,0.85); font-size:0.9rem; line-height:1.55; margin:0;">도구 실행 직전 &mdash; 위험한 Bash 차단, 특정 경로 쓰기 방지, 사전 검증</p>
+    </div>
+    <div style="border:1px solid rgba(52,211,153,0.28); border-top:3px solid #34d399; padding:16px 20px; border-radius:4px; background:rgba(52,211,153,0.04);">
+      <div style="color:#34d399; font-size:0.82rem; font-weight:700; letter-spacing:0.08em; margin-bottom:6px;">UserPromptSubmit</div>
+      <p style="color:rgba(255,255,255,0.85); font-size:0.9rem; line-height:1.55; margin:0;">사용자 입력 직후 &mdash; 프롬프트 증강, 자동 컨텍스트 주입, 팀 컨벤션 강제</p>
+    </div>
+    <div style="border:1px solid rgba(251,191,36,0.28); border-top:3px solid #fbbf24; padding:16px 20px; border-radius:4px; background:rgba(251,191,36,0.04);">
+      <div style="color:#fbbf24; font-size:0.82rem; font-weight:700; letter-spacing:0.08em; margin-bottom:6px;">PostToolUse</div>
+      <p style="color:rgba(255,255,255,0.85); font-size:0.9rem; line-height:1.55; margin:0;">도구 실행 후 &mdash; 포매터 자동 실행, 테스트 자동 트리거, 로그 기록</p>
+    </div>
+    <div style="border:1px solid rgba(167,139,250,0.28); border-top:3px solid #a78bfa; padding:16px 20px; border-radius:4px; background:rgba(167,139,250,0.04);">
+      <div style="color:#a78bfa; font-size:0.82rem; font-weight:700; letter-spacing:0.08em; margin-bottom:6px;">Stop</div>
+      <p style="color:rgba(255,255,255,0.85); font-size:0.9rem; line-height:1.55; margin:0;">세션 종료 시 &mdash; 알림, 상태 체크포인트, 남은 TODO 리마인드</p>
+    </div>
+  </div>
+  <pre style="margin:1.5vh 0 0; width:100%; max-width:1040px; font-family:'JetBrains Mono',monospace; font-size:0.78rem; background:rgba(34,211,238,0.04); border-left:3px solid #22d3ee; padding:12px 18px; color:rgba(255,255,255,0.88); line-height:1.5; border-radius:3px; white-space:pre-wrap;">// ~/.claude/settings.json
+{"hooks": {
+  "PreToolUse": [{"matcher":"Bash","hooks":[{"type":"command","command":"./guard-bash.sh"}]}],
+  "PostToolUse": [{"matcher":"Write|Edit","hooks":[{"type":"command","command":"prettier --write $CLAUDE_FILE_PATHS"}]}]
+}}</pre>
+  <p class="sub" style="margin-top:1vh;">Claude가 한 번에 하나씩 따르는 규칙 &rarr; <span class="em">훅은 자동 집행</span> &mdash; 지침과 행위의 간극을 메운다</p>
+</div>
+
+<!-- B7.1b Monitor tool - 이벤트 기반 스트리밍 -->
+<div class="slide in-cyan">
+  <h3>Monitor tool &mdash; 폴링 대신 이벤트 스트리밍 (2026-04+)</h3>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; width:100%; max-width:1040px; margin-top:2vh;">
+    <div style="border:1px solid rgba(252,165,165,0.28); border-top:3px solid #fca5a5; padding:18px 20px; border-radius:4px; background:rgba(252,165,165,0.04);">
+      <div style="color:#fca5a5; font-size:0.82rem; font-weight:700; letter-spacing:0.08em; margin-bottom:8px;">Before &mdash; 폴링 (낭비)</div>
+      <pre style="margin:0; font-family:'JetBrains Mono',monospace; font-size:0.78rem; color:rgba(255,255,255,0.85); line-height:1.55; white-space:pre-wrap;">while true; do
+  npm run build
+  sleep 30
+done</pre>
+      <p style="color:rgba(255,255,255,0.7); font-size:0.82rem; margin:10px 0 0; line-height:1.5;">idle 상태에도 토큰 소모, 실시간성 X</p>
+    </div>
+    <div style="border:1px solid rgba(52,211,153,0.28); border-top:3px solid #34d399; padding:18px 20px; border-radius:4px; background:rgba(52,211,153,0.04);">
+      <div style="color:#34d399; font-size:0.82rem; font-weight:700; letter-spacing:0.08em; margin-bottom:8px;">After &mdash; Monitor (이벤트 기반)</div>
+      <pre style="margin:0; font-family:'JetBrains Mono',monospace; font-size:0.78rem; color:rgba(255,255,255,0.85); line-height:1.55; white-space:pre-wrap;">Monitor: npm run dev
+  &rarr; stdout 한 줄마다
+     task-notification 이벤트 발생</pre>
+      <p style="color:rgba(255,255,255,0.7); font-size:0.82rem; margin:10px 0 0; line-height:1.5;">실제 스트리밍 될 때만 깨어남 &mdash; 대기 비용 0</p>
+    </div>
+  </div>
+  <div class="note tip" style="margin-top:2vh;">
+    <p><strong style="color:#22d3ee;">쓰는 곳</strong> &mdash; 개발서버 에러 감시, 로그 tail, CI 완료 대기, 긴 빌드, 테스트 스위트 첫 실패 캐치. <span style="color:rgba(255,255,255,0.6);">한 번 샷 &quot;끝날 때까지 대기&quot;는 Bash <code>run_in_background</code>로 충분.</span></p>
+  </div>
+  <p class="sub" style="margin-top:1.5vh;"><code>/loop</code> + <code>ScheduleWakeup</code>의 heartbeat 폴링이 아닌 <span class="em">외부 사건이 주도</span>하는 흐름</p>
+</div>
+
 <!-- B7.2 Commands 레퍼런스 -->
 <div class="slide in-cyan">
   <h3>Commands &mdash; 자주 쓰는 슬래시 명령</h3>
@@ -1632,7 +1690,7 @@ ExitWorktree({keepBranch:true})</pre>
 <div class="slide in-cyan">
   <h3>비용 &middot; Rate Limit &middot; 모델 티어</h3>
   <div class="stat-grid" style="margin-top:2vh;">
-    <div class="stat-card on" style="border-top:3px solid rgba(167,139,250,0.55);"><div class="label" style="color:#a78bfa;">Opus 4.6</div><div class="value" style="color:#a78bfa;">$$$</div><div class="source">오케스트레이션 &middot; 설계 결정만</div></div>
+    <div class="stat-card on" style="border-top:3px solid rgba(167,139,250,0.55);"><div class="label" style="color:#a78bfa;">Opus 4.7</div><div class="value" style="color:#a78bfa;">$$$</div><div class="source">오케스트레이션 &middot; 설계 결정만</div></div>
     <div class="stat-card on" style="border-top:3px solid rgba(34,211,238,0.55);"><div class="label" style="color:#22d3ee;">Sonnet 4.6</div><div class="value" style="color:#22d3ee;">$$</div><div class="source">집중 구현 &middot; 리뷰 &middot; 일반 작업</div></div>
     <div class="stat-card on" style="border-top:3px solid rgba(52,211,153,0.55);"><div class="label" style="color:#34d399;">Haiku 4.5</div><div class="value" style="color:#34d399;">$</div><div class="source">읽기 전용 탐색 &middot; lookup</div></div>
   </div>
@@ -1824,10 +1882,9 @@ ExitWorktree({keepBranch:true})</pre>
   <h3>Lab 2 &middot; 만들고 &middot; 돌리고 &middot; 개선하기</h3>
   <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:2vh; width:100%; max-width:1040px;">
     <div style="border:1px solid rgba(251,191,36,0.28); border-top:3px solid #fbbf24; padding:18px 18px; border-radius:4px; background:rgba(251,191,36,0.04);">
-      <div style="color:#fbbf24; font-size:0.82rem; font-weight:700; letter-spacing:0.08em; margin-bottom:8px;">STEP 1 &middot; 설치</div>
-      <pre style="margin:0; font-family:'JetBrains Mono',monospace; font-size:0.8rem; color:rgba(255,255,255,0.9); line-height:1.6; white-space:pre-wrap;">/install-skill \
-  https://github.com/anthropics/
-  claude-code-skill-builder</pre>
+      <div style="color:#fbbf24; font-size:0.82rem; font-weight:700; letter-spacing:0.08em; margin-bottom:8px;">STEP 1 &middot; 시작</div>
+      <pre style="margin:0; font-family:'JetBrains Mono',monospace; font-size:0.8rem; color:rgba(255,255,255,0.9); line-height:1.6; white-space:pre-wrap;">/skill-creator</pre>
+      <p style="color:rgba(255,255,255,0.7); font-size:0.8rem; line-height:1.5; margin:8px 0 0;">Claude Code 내장 스킬 &mdash; 추가 설치 불필요</p>
     </div>
     <div style="border:1px solid rgba(52,211,153,0.28); border-top:3px solid #34d399; padding:18px 18px; border-radius:4px; background:rgba(52,211,153,0.04);">
       <div style="color:#34d399; font-size:0.82rem; font-weight:700; letter-spacing:0.08em; margin-bottom:8px;">STEP 2 &middot; 생성</div>
@@ -1967,15 +2024,15 @@ const partMap=[
 {from:41,to:44,label:'Section 06 \u00b7 \ud604\uc2e4 \uc81c\uc57d'},
 {from:45,to:53,label:'Part II B1 \u00b7 Claude Code + Agent Loop'},
 {from:54,to:65,label:'Part II B2 \u00b7 Context + Multi-agent + MCP'},
-{from:66,to:76,label:'Part II B3 \u00b7 \uc2e4\uc804 \uc6cc\ud06c\ud50c\ub85c + Harness'},
-{from:77,to:79,label:'Part II B4 \u00b7 \uc6b4\uc601 \u00b7 \ube44\uc6a9'},
-{from:80,to:81,label:'Part III \u00b7 Hands-on Labs \u00b7 \uc624\ub9ac\uc5d4\ud14c\uc774\uc158'},
-{from:82,to:83,label:'Part III \u00b7 Lab 0 \u00b7 \uce74\uce74\uc624\ud1a1 \ubd84\uc11d'},
-{from:84,to:85,label:'Part III \u00b7 Lab 1 \u00b7 \uc6f9 \ub9ac\uc11c\uce58 \ub9ac\ud3ec\ud2b8'},
-{from:86,to:87,label:'Part III \u00b7 Lab 2 \u00b7 Skill Builder'},
-{from:88,to:88,label:'Part III \u00b7 Lab 3 \u00b7 \uc790\uc720 \uc2e4\uc2b5'},
-{from:89,to:89,label:'Part III \u00b7 Lab \ud68c\uace0'},
-{from:90,to:93,label:'Closing'}
+{from:66,to:78,label:'Part II B3 \u00b7 \uc2e4\uc804 \uc6cc\ud06c\ud50c\ub85c + Harness'},
+{from:79,to:81,label:'Part II B4 \u00b7 \uc6b4\uc601 \u00b7 \ube44\uc6a9'},
+{from:82,to:83,label:'Part III \u00b7 Hands-on Labs \u00b7 \uc624\ub9ac\uc5d4\ud14c\uc774\uc158'},
+{from:84,to:85,label:'Part III \u00b7 Lab 0 \u00b7 \uce74\uce74\uc624\ud1a1 \ubd84\uc11d'},
+{from:86,to:87,label:'Part III \u00b7 Lab 1 \u00b7 \uc6f9 \ub9ac\uc11c\uce58 \ub9ac\ud3ec\ud2b8'},
+{from:88,to:89,label:'Part III \u00b7 Lab 2 \u00b7 Skill Builder'},
+{from:90,to:90,label:'Part III \u00b7 Lab 3 \u00b7 \uc790\uc720 \uc2e4\uc2b5'},
+{from:91,to:91,label:'Part III \u00b7 Lab \ud68c\uace0'},
+{from:92,to:95,label:'Closing'}
 ];
 function getPartLabel(idx){for(const p of partMap){if(idx>=p.from&&idx<=p.to)return p.label;}return 'AI \uc138\ubbf8\ub098';}
 function update(){if(!pageNumEl||!progressEl)return;pageNumEl.textContent=`${current+1} / ${total}`;progressEl.style.width=total>1?`${(current/(total-1))*100}%`:'100%';if(partLabelEl)partLabelEl.textContent=getPartLabel(current);}

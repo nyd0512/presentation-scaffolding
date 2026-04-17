@@ -1345,6 +1345,89 @@
       </div>
     </div>
 
+    <!-- 더 알아두면 좋은 것 -->
+    <div class="slide surface">
+      <h3>더 알아두면 좋은 것</h3>
+      <p class="sub" style="margin-top:1vh; margin-bottom:2vh; font-size:clamp(1rem,1.4vw,1.2rem); color:rgba(255,255,255,0.55);">오늘 실습 너머의 활용 &mdash; 관심 생긴 순서대로</p>
+      <div class="stat-grid" style="grid-template-columns:1fr 1fr 1fr; max-width:960px; gap:12px;">
+        <div class="stat-card on" style="padding:22px 18px;">
+          <div class="label" style="color:#5FB3FF;">병렬 터미널</div>
+          <div class="value" style="font-size:clamp(1rem,1.4vw,1.2rem); letter-spacing:0; line-height:1.45;">탭 여러 개 &mdash;<br/>독립 작업 동시 진행</div>
+          <div class="source" style="margin-top:6px;">프론트 / 백엔드 / 리서치 동시</div>
+        </div>
+        <div class="stat-card green-on" style="padding:22px 18px;">
+          <div class="label" style="color:#10E890;">음성 입력</div>
+          <div class="value" style="font-size:clamp(1rem,1.4vw,1.2rem); letter-spacing:0; line-height:1.45;">SuperWhisper<br/>타이핑보다 3배 빠름</div>
+          <div class="source" style="margin-top:6px;">오타/문법은 AI가 보정</div>
+        </div>
+        <div class="stat-card on" style="padding:22px 18px; border-top-color:rgba(196,181,253,0.4);">
+          <div class="label" style="color:#C4B5FD;">AI &rarr; AI 연쇄</div>
+          <div class="value" style="font-size:clamp(1rem,1.4vw,1.2rem); letter-spacing:0; line-height:1.45;">Claude &rarr; Gemini<br/>&rarr; 웹 &rarr; 종합 보고</div>
+          <div class="source" style="margin-top:6px;">결과를 다시 AI로 검증/가공</div>
+        </div>
+        <div class="stat-card on" style="padding:22px 18px; border-top-color:rgba(251,207,96,0.4);">
+          <div class="label" style="color:#FBCF60;">모델 결합</div>
+          <div class="value" style="font-size:clamp(1rem,1.4vw,1.2rem); letter-spacing:0; line-height:1.45;">Claude(실행)<br/>+ Gemini(장문/멀티모달)</div>
+          <div class="source" style="margin-top:6px;">긴 문서는 Gemini, 실행은 Claude</div>
+        </div>
+        <div class="stat-card on" style="padding:22px 18px; border-top-color:rgba(253,164,175,0.4);">
+          <div class="label" style="color:#FDA4AF;">바이브 코딩</div>
+          <div class="value" style="font-size:clamp(1rem,1.4vw,1.2rem); letter-spacing:0; line-height:1.45;">범용 SaaS 대신<br/>나만의 맞춤 도구</div>
+          <div class="source" style="margin-top:6px;">아이디어 &rarr; 도구화를 AI가</div>
+        </div>
+        <div class="stat-card on" style="padding:22px 18px; border-top-color:rgba(78,237,180,0.4);">
+          <div class="label" style="color:#4EEDB4;">Harness 내재화</div>
+          <div class="value" style="font-size:clamp(1rem,1.4vw,1.2rem); letter-spacing:0; line-height:1.45;">Skill + CLAUDE.md<br/>= 완전한 제어</div>
+          <div class="source" style="margin-top:6px;">만드는 과정이 곧 학습</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cheat Sheet -->
+    <div class="slide surface">
+      <h3>Cheat Sheet &mdash; 명령어 &middot; 프롬프트</h3>
+      <p class="sub" style="margin-top:1vh; margin-bottom:2vh; font-size:clamp(1rem,1.4vw,1.2rem); color:rgba(255,255,255,0.55);">실습 자료와 함께 들고 다니는 빠른 참조</p>
+      <div class="two-col" style="max-width:1000px; gap:2.5vw;">
+        <div class="col">
+          <div style="font-size:0.78rem; color:rgba(255,255,255,0.42); letter-spacing:0.12em; text-transform:uppercase; font-weight:700; margin-bottom:10px;">슬래시 명령어</div>
+          <table class="tbl" style="margin-top:0; width:100%;">
+            <tbody>
+              <tr><td><kbd>/help</kbd></td><td>도움말</td></tr>
+              <tr><td><kbd>/compact</kbd></td><td>대화 컨텍스트 압축</td></tr>
+              <tr><td><kbd>/clear</kbd></td><td>새 대화 시작</td></tr>
+              <tr><td><kbd>/usage</kbd></td><td>사용량 &middot; Rate Limit</td></tr>
+              <tr><td><kbd>/copy</kbd></td><td>마지막 응답 복사</td></tr>
+              <tr><td><kbd>/chrome</kbd></td><td>브라우저 연동</td></tr>
+              <tr><td><kbd>/commit</kbd></td><td>Git 커밋 생성</td></tr>
+              <tr><td><kbd>/mcp</kbd></td><td>MCP 서버 관리</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col">
+          <div style="font-size:0.78rem; color:rgba(255,255,255,0.42); letter-spacing:0.12em; text-transform:uppercase; font-weight:700; margin-bottom:10px;">복사해서 쓰는 프롬프트</div>
+          <div class="code" style="margin:0; max-height:none; font-size:clamp(0.78rem,0.92vw,0.88rem); padding:18px 20px;"><span class="comment">// 분석</span>
+"이 데이터의 패턴과 이상치를 찾아줘"
+"이 코드의 성능 병목점을 분석해줘"
+
+<span class="comment">// 생성</span>
+"이 요구사항으로 HTML 대시보드 만들어줘"
+"회의록을 임원 보고서로 만들어줘"
+
+<span class="comment">// 자동화</span>
+"이 작업을 반복하는 Skill 만들어줘"
+
+<span class="comment">// 리서치</span>
+"먼저 조사해줘 &mdash; 경쟁사 3곳 비교"
+
+<span class="comment">// 검증</span>
+"이 결과를 다른 관점으로 검토해줘"</div>
+        </div>
+      </div>
+      <div class="note tip" style="margin-top:2vh;">
+        <p>맥락 + 구체적 목표 + 제약조건 &mdash; <strong>이 3가지를 넣으면 품질이 달라진다</strong></p>
+      </div>
+    </div>
+
     <!-- 배운 건 나누자 -->
     <div class="slide in-mint">
       <h3>배운 건 나누자</h3>
@@ -1451,8 +1534,8 @@
       {from:20,to:22,label:'Section 06 \u00b7 AI \uc778\ud504\ub77c \ubcd1\ubaa9'},
       {from:23,to:29,label:'Section 07 \u00b7 \uc5ed\ud560\uc758 \ubcc0\ud654'},
       {from:30,to:35,label:'Section 08 \u00b7 \ud604\uc2e4 \uc81c\uc57d'},
-      {from:36,to:50,label:'Hands-on'},
-      {from:51,to:53,label:'Closing'}
+      {from:36,to:52,label:'Hands-on'},
+      {from:53,to:55,label:'Closing'}
     ];
     function getPartLabel(idx){for(const p of partMap){if(idx>=p.from&&idx<=p.to)return p.label;}return 'AI Tool Hands-on';}
     function update(){if(!pageNumEl||!progressEl)return;pageNumEl.textContent=`${current+1} / ${total}`;progressEl.style.width=total>1?`${(current/(total-1))*100}%`:'100%';if(partLabelEl)partLabelEl.textContent=getPartLabel(current);}
