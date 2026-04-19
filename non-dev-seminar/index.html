@@ -1015,6 +1015,36 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
   <p class="sub">실행 시간이 3주 &rarr; 1일로 압축 &mdash; <span class="em">기획과 판단</span>의 비중이 더 커진다</p>
 </div>
 
+<!-- S36b 실제 사례 — SWDP.NEXT 업그레이드 (실행 시간 압축) -->
+<div class="slide in-violet">
+  <h3>실제 사례 &mdash; SWDP.NEXT 업그레이드</h3>
+  <div class="comp" style="margin-top:2vh;">
+    <div class="comp-item on" style="border-top:3px solid rgba(255,255,255,0.18); padding:3.5vh 2vw;">
+      <div class="tag" style="color:rgba(255,255,255,0.6);">2022</div>
+      <p style="font-size:clamp(1.3rem,1.9vw,1.7rem); color:rgba(255,255,255,0.8); margin-top:1.2vh;"><strong style="font-size:clamp(2.2rem,3.6vw,2.9rem); display:inline-block; color:rgba(255,255,255,0.9); letter-spacing:-0.02em;">10명 &middot; 1년</strong><br><span style="font-size:clamp(0.95rem,1.15vw,1.1rem); color:rgba(255,255,255,0.55); font-weight:400;">jQuery &rarr; Vue &middot; SDS 6명 별도 계약</span></p>
+    </div>
+    <div class="comp-item on" style="border-top:3px solid rgba(167,139,250,0.6); background:transparent; padding:3.5vh 2vw;">
+      <div class="tag" style="color:#a78bfa;">2026</div>
+      <p style="font-size:clamp(1.3rem,1.9vw,1.7rem); color:#a78bfa; margin-top:1.2vh;"><strong style="font-size:clamp(2.2rem,3.6vw,2.9rem); display:inline-block; letter-spacing:-0.02em;">2명 &middot; 4주</strong><br><span style="font-size:clamp(0.95rem,1.15vw,1.1rem); color:rgba(167,139,250,0.75); font-weight:400;">백엔드 전면 업그레이드 &middot; 10만 Line+</span></p>
+    </div>
+  </div>
+  <div class="stat-grid" style="margin-top:3vh; max-width:860px;">
+    <div class="stat-card on">
+      <div class="label">인원</div>
+      <div class="value" style="color:#fff;">1/5</div>
+    </div>
+    <div class="stat-card on">
+      <div class="label">기간</div>
+      <div class="value" style="color:#a78bfa;">1/12</div>
+    </div>
+    <div class="stat-card on">
+      <div class="label">작업 복잡도</div>
+      <div class="value" style="color:#fff;">&uarr;</div>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:3vh;">AI가 실행을 맡으면서 &mdash; <span class="em">더 적은 자원 &middot; 더 짧은 시간</span>으로 더 복잡한 작업</p>
+</div>
+
 <!-- S37 도메인 전문성 + AI -->
 <div class="slide surface">
   <h3>도메인 전문성과 AI의 결합</h3>
@@ -1441,9 +1471,9 @@ const partMap=[
 {from:14,to:22,label:'Section 03 \u00b7 \uac19\uc740 AI, \ub2e4\ub978 \uacb0\uacfc'},
 {from:23,to:30,label:'Section 04 \u00b7 \ucf54\ub529\uc744 \ub118\uc5b4'},
 {from:31,to:38,label:'Section 05 \u00b7 AI \uc778\ud504\ub77c\uc758 \ubcd1\ubaa9'},
-{from:39,to:48,label:'Section 06 \u00b7 \uc5ed\ud560\uc758 \ubcc0\ud654'},
-{from:49,to:55,label:'Section 07 \u00b7 \ud604\uc2e4 \uc81c\uc57d\uacfc \uc2e4\ucc9c'},
-{from:56,to:59,label:'Closing'}
+{from:39,to:49,label:'Section 06 \u00b7 \uc5ed\ud560\uc758 \ubcc0\ud654'},
+{from:50,to:56,label:'Section 07 \u00b7 \ud604\uc2e4 \uc81c\uc57d\uacfc \uc2e4\ucc9c'},
+{from:57,to:60,label:'Closing'}
 ];
 function getPartLabel(idx){for(const p of partMap){if(idx>=p.from&&idx<=p.to)return p.label;}return 'AI \uc138\ubbf8\ub098';}
 function update(){if(!pageNumEl||!progressEl)return;pageNumEl.textContent=`${current+1} / ${total}`;progressEl.style.width=total>1?`${(current/(total-1))*100}%`:'100%';if(partLabelEl)partLabelEl.textContent=getPartLabel(current);}
