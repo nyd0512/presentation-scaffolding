@@ -99,9 +99,7 @@ html{font-size:117%}
 
 /* Pill / badge */
 .pill{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:999px;border:1px solid rgba(96,165,250,0.35);background:rgba(96,165,250,0.08);font-size:0.78rem;color:rgba(255,255,255,0.85);letter-spacing:0.06em;text-transform:uppercase;font-weight:500;margin-bottom:1.5vh}
-.pill.warn{border-color:rgba(252,165,165,0.4);background:rgba(252,165,165,0.06);color:#fca5a5}
 .pill.amber{border-color:rgba(251,146,60,0.4);background:rgba(251,146,60,0.06);color:#fb923c}
-.pill.green{border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.06);color:#34d399}
 
 /* Quote card — dev-seminar blockquote 스타일에 맞춤, 따옴표 완전 제거 */
 .qcard{padding:0;border:none;background:transparent;max-width:880px;text-align:center;box-shadow:none}
@@ -557,7 +555,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
   <span style="color:#a5b4fc;">"agents"</span>: { ... },
   <span style="color:#a5b4fc;">"env"</span>: { ... }
 }</pre>
-      <div style="padding:10px 18px; color:rgba(255,255,255,0.55); font-size:0.82rem; border-top:1px solid rgba(96,165,250,0.1); text-align:center;">팀 공통 규칙 파일 &mdash; git에 commit</div>
+      <div style="padding:10px 18px; color:rgba(255,255,255,0.55); font-size:0.82rem; border-top:1px solid rgba(96,165,250,0.1); text-align:center;">팀 공통 규칙 파일 &mdash; git에 커밋</div>
     </div>
     <div style="flex:1;">
       <div class="arch-layers" style="margin-top:0; max-width:none;">
@@ -740,7 +738,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
     <div style="padding:1.4vh 1.6vw; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">06</span><span style="color:rgba(255,255,255,0.92);">테스트/빌드를 <strong>자동 멈춤 신호</strong>로 강제</span></div>
     <div style="padding:1.4vh 1.6vw; border-bottom:1px solid rgba(255,255,255,0.06); border-right:1px solid rgba(255,255,255,0.06); display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">07</span><span style="color:rgba(255,255,255,0.92);">교훈을 <code>AGENTS.md</code>에 capture</span></div>
     <div style="padding:1.4vh 1.6vw; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">08</span><span style="color:rgba(255,255,255,0.92);">plan 업데이트</span></div>
-    <div style="padding:1.4vh 1.6vw; border-right:1px solid rgba(255,255,255,0.06); display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">09</span><span style="color:rgba(255,255,255,0.92);">동작하는 increment commit</span></div>
+    <div style="padding:1.4vh 1.6vw; border-right:1px solid rgba(255,255,255,0.06); display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">09</span><span style="color:rgba(255,255,255,0.92);">동작하는 단위로 커밋</span></div>
     <div style="padding:1.4vh 1.6vw; display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">10</span><span style="color:rgba(255,255,255,0.92);">실패 패턴 반복 시 prompt 튜닝</span></div>
   </div>
   <div class="note warn" style="margin-top:2vh;"><p><strong style="color:#fca5a5;">조심:</strong> Ralph Loop는 <span style="color:#fff; font-weight:700;">신규 코드베이스 부트스트래핑에만 적합</span> &mdash; 기존 코드베이스에 적용은 위험</p></div>
@@ -1400,7 +1398,7 @@ cd ../feat-x &amp;&amp; claude</pre>
     </div>
     <div class="comp-item">
       <div class="tag" style="color:#a5b4fc;">SHARE</div>
-      <p>잘 되는 슬래시 명령 1개<br><strong>팀 레포 commit</strong></p>
+      <p>잘 되는 슬래시 명령 1개<br><strong>팀 레포에 커밋</strong></p>
     </div>
   </div>
   <p class="sub" style="margin-top:3vh;">harness는 한 번에 못 만든다 &mdash; <span class="em">작업 → 룰 → 측정</span>의 사이클</p>
@@ -1441,7 +1439,7 @@ const partMap=[
 ];
 function getPartLabel(idx){for(const p of partMap){if(idx>=p.from&&idx<=p.to)return p.label;}return 'Harness Engineering';}
 function update(){if(!pageNumEl||!progressEl)return;pageNumEl.textContent=`${current+1} / ${total}`;progressEl.style.width=total>1?`${(current/(total-1))*100}%`:'100%';if(partLabelEl)partLabelEl.textContent=getPartLabel(current);}
-function goTo(i){if(total===0)return;if(i<0)i=0;if(i>=total)i=total-1;current=i;document.getElementById('slides').style.transform=`translateX(-${current*100}vw)`;history.replaceState(null,'','#'+(current+1));update();}
+function goTo(i){if(total===0)return;if(i<0)i=0;if(i>=total)i=total-1;current=i;document.getElementById('slides').style.transform=`translateX(-${current*100}vw)`;history.replaceState(null,'','#'+(current+1));slides.forEach((s,idx)=>{if(idx===current){s.removeAttribute('inert');s.removeAttribute('aria-hidden')}else{s.setAttribute('inert','');s.setAttribute('aria-hidden','true')}});update();}
 function next(){goTo(current+1);}
 function prev(){goTo(current-1);}
 document.addEventListener('keydown',e=>{const tag=document.activeElement.tagName;if(tag==='INPUT'||tag==='TEXTAREA'||document.activeElement.isContentEditable)return;switch(e.key){case'ArrowRight':case' ':case'PageDown':e.preventDefault();next();break;case'ArrowLeft':case'PageUp':e.preventDefault();prev();break;case'Home':e.preventDefault();goTo(0);break;case'End':e.preventDefault();goTo(total-1);break;case'f':case'F':const el=document.documentElement;const isFs=document.fullscreenElement||document.webkitFullscreenElement;if(!isFs){(el.requestFullscreen||el.webkitRequestFullscreen).call(el)?.catch(()=>{});}else{(document.exitFullscreen||document.webkitExitFullscreen).call(document)?.catch(()=>{});}break;}});
