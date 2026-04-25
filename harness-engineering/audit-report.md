@@ -239,7 +239,38 @@
 | **B4** | br 사이 한국어 단어 결합 (`[가-힣]<br>[가-힣]`) | 0건 | ✅ PASS |
 | **D2** | 본문 큰따옴표 (의미 약한 것) | 잔존 42건 모두 의미 있음 | ✅ PASS |
 
-**총 위반: 0건**
+### 추가 자동 검증 (chrome 시각 측정 + JS 동작 시뮬레이션) — 14 → 24룰 확장
+
+| 카테고리 | 룰 | 측정값 | 상태 |
+|---|---|---|---|
+| **B3** | h1 line-height | 132.5/112.3 = **1.18** | ✅ PASS |
+| **C2** | .arch-layer grid (140px / 1fr / auto) | "140px 423px 130px" | ✅ PASS |
+| **C5** | .qcard ::before/::after 따옴표 | content: none | ✅ PASS |
+| **C7** | .comp-item p 폰트 ≥ 1.1rem | 26.21px (1.4rem) | ✅ PASS |
+| **C7** | .arch-layer .brand 폰트 ≥ 1.15rem | 25.83px (1.38rem) | ✅ PASS |
+| **E4** | sub 폰트 (37px) | 36.5px | ✅ PASS |
+| **E6** | .arch-layer .role min-width (40px) | **40px** (수정) | ✅ PASS |
+| **E8** | blockquote max-width (780px) | 780px | ✅ PASS |
+| **E9** | .list li padding (1.8vh) | 18.22px = 1.8vh | ✅ PASS |
+| **E10** | .stat-card .value 폰트 | 84.24px (clamp 결과) | ✅ PASS |
+| **E11** | .note.warn 무채색 border | rgba(255,255,255,0.2) | ✅ PASS |
+| **E14** | html font-size (117%) | 18.72px = 16×1.17 | ✅ PASS |
+| **F6** | keyboard nav (←→) 동작 | dispatch 후 current 0→1 | ✅ PASS |
+| **F7** | Space 키 button focus 시 hijack X | nav button focus 시 current 변화 0 | ✅ PASS |
+| **F8** | prefers-reduced-motion 룰 존재 | 매체 쿼리 검출 | ✅ PASS |
+| **F9** | mobile MQ + inline grid/flex collapse | 768px MQ + grid:1fr + flex:column | ✅ PASS |
+| **F10** | 모바일 코드 wrap (pre-wrap) | 모바일 MQ 안 pre-wrap | ✅ PASS |
+| **F11** | hashchange listener (hash 동기화) | hash #5 → current 4 | ✅ PASS |
+| **G1** | `<title>` | "Harness Engineering — 모델을 잇는 구조물" | ✅ PASS |
+| **G4** | body 배경 #0D0D0D | rgb(13,13,13) (수정) | ✅ PASS |
+
+**총 24 룰 자동 검증 PASS — 위반 0건**
+
+### 이번 추가 사이클 처리 (G4 / E6)
+
+자동 검증 확장 중 2건 위반 발견 → 즉시 수정:
+- **G4** body 배경 `#000` → `#0D0D0D` (명세 G4 다크 테마 정확화)
+- **E6** `.arch-layer .role` min-width `auto` → `40px` (명세 E6 부합)
 
 ### 2026-04-25 추가 사이클 처리 결과 (compact 후)
 
