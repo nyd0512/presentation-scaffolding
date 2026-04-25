@@ -298,6 +298,29 @@
 
 **총 30 룰 자동 검증 PASS — 위반 0건**
 
+### 추가 자동 검증 (G2 / G3 / F2 정확 측정 / C8) — 30 → 35룰 확장
+
+| 룰 | 측정 결과 | 상태 |
+|---|---|---|
+| **G2** | viewport meta | "width=device-width, initial-scale=1.0" | ✅ PASS |
+| **G3** | body font | "Noto Sans KR" | ✅ PASS |
+| **G3** | h1 font | "Figtree" | ✅ PASS |
+| **G3** | code font | "JetBrains Mono" | ✅ PASS |
+| **F2** | hash #5 진행 → inert 토글 정확성 | 63/63 (활성 1 inert 제거 + 비활성 62 inert 부착) | ✅ PASS |
+| **F2** | aria-hidden 동기 토글 | 63/63 | ✅ PASS |
+| **C8** | mac signal dots 마크업 (`span[border-radius:50%][width:8-14px]`) | 0건 | ✅ PASS |
+
+**총 35 룰 자동 검증 PASS — 위반 0건**
+
+### 자동화 가능 영역 100% 도달
+
+명세 50+ 룰 중 자동 검증 가능 영역 (35룰) 모두 PASS. 남은 ~15룰은 사람 시각 영역:
+- A2 5인 익명 톤 (사용자 시각으로 30+ iteration picky-fix 누적 통해 검증 완료)
+- A3 캡처 영상 매몰 (사람 시각, 디자인 의도)
+- B1 명사형 vs 명령형 (grep으로 패턴 catch 후 사용자 confirm)
+- E15 Section 색 의미 정합 (E15는 색 분포만 자동, 의미는 사람 시각)
+- C6 슬라이드별 카드 균일은 자동화 + S62 미세 비대칭 PASS* 처리
+
 ### 이번 추가 사이클 처리 (G4 / E6)
 
 자동 검증 확장 중 2건 위반 발견 → 즉시 수정:

@@ -26,7 +26,7 @@ h3{margin:0;font-size:clamp(0.9rem,1.2vw,1.1rem);font-weight:400;letter-spacing:
 .em{color:#fb923c}.accent{color:#fb923c}.red{color:#fca5a5}.green{color:#34d399}.yellow{color:#fbbf24}.blue{color:#60a5fa}
 .meta{margin-top:2vh;font-size:0.8rem;color:rgba(255,255,255,0.55);font-weight:400;letter-spacing:0.18em;text-transform:uppercase}
 .comp{display:flex;gap:0;width:100%;max-width:1100px;margin:3vh 0;align-items:stretch}
-.comp-item{padding:4vh 3vw;text-align:center;flex:1 1 0;min-width:0;border-right:1px solid rgba(255,255,255,0.08);display:flex;flex-direction:column;justify-content:flex-start;align-items:center;gap:12px}
+.comp-item{padding:4vh 1.6vw;text-align:center;flex:1 1 0;min-width:0;border-right:1px solid rgba(255,255,255,0.08);display:flex;flex-direction:column;justify-content:flex-start;align-items:center;gap:12px}
 .comp-item:last-child{border-right:none}
 .comp-item .tag{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.18em;color:rgba(255,255,255,0.5);font-weight:500}
 .comp-item p{font-size:clamp(1.05rem,1.4vw,1.3rem);font-weight:300;line-height:1.55;color:rgba(255,255,255,0.78)}
@@ -52,7 +52,7 @@ cite{display:block;margin-top:24px;font-size:0.78rem;color:rgba(255,255,255,0.55
 .stat-card .value{font-family:'Figtree',sans-serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:900;letter-spacing:-0.04em;line-height:1.1;color:#fff;margin-bottom:6px;padding-bottom:2px}
 .stat-card .source{font-size:0.78rem;color:rgba(255,255,255,0.55);letter-spacing:0.05em}
 .arch-layers{display:flex;flex-direction:column;gap:0;width:100%;max-width:980px;margin-top:3vh}
-.arch-layer{display:grid;grid-template-columns:110px 1fr 160px;align-items:center;gap:1.4vw;padding:2.4vh 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.arch-layer{display:grid;grid-template-columns:120px 1fr auto;align-items:center;gap:1.6vw;padding:2.4vh 0;border-bottom:1px solid rgba(255,255,255,0.06)}
 .arch-layer:last-child{border-bottom:none}
 .arch-layer .role{font-size:0.78rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.12em;text-align:left;min-width:40px}
 .arch-layer .brand{flex:1;font-size:clamp(1.1rem,1.4vw,1.32rem);font-weight:700;color:#fff;text-align:left}
@@ -650,11 +650,11 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
   <div class="comp" style="margin-top:5vh; max-width:980px;">
     <div class="comp-item">
       <div class="tag">실무 회고</div>
-      <p>한 번 안에 완성된 사례 <strong>0건</strong></p>
+      <p>한 번에 완성된 사례<br><strong>0건</strong></p>
     </div>
     <div class="comp-item">
       <div class="tag">실패 원인</div>
-      <p>대부분 <strong>분해 부족</strong>으로 귀결</p>
+      <p>대부분<br><strong>분해 부족</strong>으로 귀결</p>
     </div>
     <div class="comp-item">
       <div class="tag">대안</div>
@@ -681,7 +681,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
     </div>
     <div class="comp-item">
       <div class="tag" style="color:#c4b5fd;">④ VERIFY</div>
-      <p><strong>검증</strong><br>단계마다 결과 확인</p>
+      <p><strong>검증</strong><br>단계별 결과 확인</p>
     </div>
   </div>
   <p class="sub" style="margin-top:3vh;"><span class="em">분해하지 않은 작업은 거의 실패</span> &mdash; 리서치 전반에서 일관된 보고</p>
@@ -1013,7 +1013,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
     </div>
     <div class="comp-item">
       <div class="tag" style="color:#fca5a5;">오해</div>
-      <p><span style="color:#fca5a5;">MCP만 붙이면 다 된다</span><br>실무에서 <strong>빠르게 약화</strong></p>
+      <p><span style="color:#fca5a5;">MCP만 붙이면 다 된다</span><br>실무에서<br><strong>빠르게 약화</strong></p>
     </div>
   </div>
   <p class="sub" style="margin-top:3vh;">MCP는 <span class="em">접근 채널</span>이지 <strong>해결책의 자동화</strong>가 아니다</p>
@@ -1391,7 +1391,7 @@ cd ../feat-x &amp;&amp; claude</pre>
     </div>
     <div class="comp-item">
       <div class="tag" style="color:#a5b4fc;">SHARE</div>
-      <p>잘 되는 명령 1개<br><strong>팀 레포에<br>커밋</strong></p>
+      <p>좋은 명령 1개<br><strong>팀 레포<br>커밋</strong></p>
     </div>
   </div>
   <p class="sub" style="margin-top:3vh;">harness는 한 번에 못 만든다 &mdash; <span class="em">작업 → 룰 → 측정</span>의 사이클</p>
