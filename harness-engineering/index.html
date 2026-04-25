@@ -354,7 +354,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
   <h3>컨텍스트 엔지니어링 <span class="em">↔</span> 하네스 엔지니어링</h3>
   <table class="tbl" style="margin-top:3vh; max-width:1080px; width:100%;">
     <thead><tr>
-      <th style="width:140px; white-space:nowrap;"></th>
+      <th style="width:160px; white-space:nowrap;"></th>
       <th style="text-align:center; color:#60a5fa;">컨텍스트 엔지니어링</th>
       <th style="text-align:center; color:#fb923c;">하네스 엔지니어링</th>
     </tr></thead>
@@ -950,11 +950,11 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
 <div class="slide in-indigo">
   <h3>실무자들이 공통으로 <span class="em">사람 손에 남기는</span> 영역</h3>
   <div class="arch-layers" style="margin-top:2vh;">
-    <div class="arch-layer"><div class="role" style="color:#fb923c;">아키텍처</div><div class="brand">시스템 설계 &middot; 모듈 경계 &middot; 데이터 모델</div><div class="desc" style="color:rgba(255,255,255,0.6);">되돌리기 어려움</div></div>
-    <div class="arch-layer"><div class="role" style="color:#fb923c;">스키마</div><div class="brand">DB 스키마 &middot; API 계약 &middot; state machine</div><div class="desc" style="color:rgba(255,255,255,0.6);">호환성 영향 큼</div></div>
-    <div class="arch-layer"><div class="role" style="color:#fb923c;">최종 리뷰</div><div class="brand">머지 직전 사람 review &middot; correctness/safety 확인</div><div class="desc" style="color:rgba(255,255,255,0.6);">책임 소재</div></div>
+    <div class="arch-layer"><div class="role" style="color:#fb923c;">아키텍처</div><div class="brand">시스템 설계 &middot; 모듈 경계</div><div class="desc" style="color:rgba(255,255,255,0.6);">되돌리기 어려움</div></div>
+    <div class="arch-layer"><div class="role" style="color:#fb923c;">스키마</div><div class="brand">DB 스키마 &middot; API 계약</div><div class="desc" style="color:rgba(255,255,255,0.6);">호환성 영향 큼</div></div>
+    <div class="arch-layer"><div class="role" style="color:#fb923c;">최종 리뷰</div><div class="brand">머지 직전 사람 review</div><div class="desc" style="color:rgba(255,255,255,0.6);">책임 소재</div></div>
     <div class="arch-layer"><div class="role" style="color:#fb923c;">scope</div><div class="brand"><span style="color:#fb923c;">이번엔 어디까지</span> 결정</div><div class="desc" style="color:rgba(255,255,255,0.6);">우선순위 판단</div></div>
-    <div class="arch-layer"><div class="role" style="color:#fb923c;">taste</div><div class="brand">UX &middot; 성능 trade-off &middot; 도메인 적합성</div><div class="desc" style="color:rgba(255,255,255,0.6);">맥락 의존</div></div>
+    <div class="arch-layer"><div class="role" style="color:#fb923c;">taste</div><div class="brand">UX &middot; 성능 &middot; 도메인 적합성</div><div class="desc" style="color:rgba(255,255,255,0.6);">맥락 의존</div></div>
   </div>
   <p class="sub" style="margin-top:2vh;"><span class="em">이해하지 못한 코드는 출시하지 않는다</span> &mdash; 모든 운영 사례의 공통 마지노선</p>
 </div>
@@ -965,15 +965,15 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
   <div class="comp" style="margin-top:3vh; max-width:980px;">
     <div class="comp-item">
       <div class="tag" style="color:#34d399;">싱글 세션</div>
-      <p>한 흐름의 추론을<br><strong>깊이 따라갈 수 있음</strong></p>
+      <p>한 흐름 추론<br><strong>깊이 따라감</strong></p>
     </div>
     <div class="comp-item">
       <div class="tag" style="color:#fca5a5;">병렬 세션</div>
-      <p>맥락 전환 비용 ↑<br><strong>각 세션이 얕아짐</strong></p>
+      <p>맥락 전환 비용 ↑<br><strong>세션이 얕아짐</strong></p>
     </div>
     <div class="comp-item">
       <div class="tag" style="color:#fbbf24;">결과</div>
-      <p>리뷰는 사람이 해야 하니<br><strong>병목은 그대로</strong></p>
+      <p>리뷰는 사람 몫<br><strong>병목은 그대로</strong></p>
     </div>
   </div>
   <p class="sub" style="margin-top:3vh;">병렬로 돌려봤자 <span class="em">리뷰가 사람이라 병목은 똑같다</span> &mdash; 회의주의 관점의 일관된 지적</p>
@@ -1272,22 +1272,22 @@ cd ../feat-x &amp;&amp; claude</pre>
   <div class="arch-layers" style="margin-top:2vh;">
     <div class="arch-layer">
       <div class="role" style="color:#fca5a5;">위험 1</div>
-      <div class="brand">잘못된 spec → loop가 잘못된 방향으로 폭주</div>
+      <div class="brand">잘못된 spec → loop 폭주</div>
       <div class="desc" style="color:rgba(255,255,255,0.6);">spec 검증이 첫 단계</div>
     </div>
     <div class="arch-layer">
       <div class="role" style="color:#fca5a5;">위험 2</div>
-      <div class="brand">Bad search 후 agent가 같은 작업 중복</div>
+      <div class="brand">Bad search 후 agent 중복</div>
       <div class="desc" style="color:rgba(255,255,255,0.6);">교착 감지 필요</div>
     </div>
     <div class="arch-layer">
       <div class="role" style="color:#fca5a5;">위험 3</div>
-      <div class="brand">Placeholder / TODO만 늘어나는 경향</div>
+      <div class="brand">Placeholder / TODO 누적</div>
       <div class="desc" style="color:rgba(255,255,255,0.6);">테스트가 멈춤 신호</div>
     </div>
     <div class="arch-layer">
       <div class="role" style="color:#fca5a5;">위험 4</div>
-      <div class="brand">자율 deploy / sudo 루프는 위험</div>
+      <div class="brand">자율 deploy / sudo 루프</div>
       <div class="desc" style="color:rgba(255,255,255,0.6);">사람 게이트 필수</div>
     </div>
   </div>
@@ -1347,15 +1347,15 @@ cd ../feat-x &amp;&amp; claude</pre>
   <div class="comp" style="margin-top:2vh; max-width:980px;">
     <div class="comp-item">
       <div class="tag" style="color:#fb923c;">01 하네스</div>
-      <p>모델을 잇는 구조물</p>
+      <p>모델을<br>잇는 구조물</p>
     </div>
     <div class="comp-item">
       <div class="tag" style="color:#fb923c;">02 분해</div>
-      <p>계획 → 조각 → 실행</p>
+      <p>계획 → 조각<br>→ 실행</p>
     </div>
     <div class="comp-item">
       <div class="tag" style="color:#fb923c;">03 정리</div>
-      <p>안티 슬롭 세션</p>
+      <p>안티 슬롭<br>세션</p>
     </div>
   </div>
 </div>
@@ -1379,19 +1379,19 @@ cd ../feat-x &amp;&amp; claude</pre>
   <div class="comp" style="margin-top:3vh; max-width:1100px;">
     <div class="comp-item">
       <div class="tag" style="color:#22d3ee;">PICK ONE</div>
-      <p>반복 작업 1개<br><strong>CLAUDE.md에 룰 1줄 추가</strong></p>
+      <p>반복 작업 1개<br><strong>CLAUDE.md에<br>룰 1줄 추가</strong></p>
     </div>
     <div class="comp-item">
       <div class="tag" style="color:#fb923c;">MEASURE</div>
-      <p>한 작업의 cost·time·eval<br><strong>1번 측정해보기</strong></p>
+      <p>한 작업의<br>cost·time·eval<br><strong>1번 측정</strong></p>
     </div>
     <div class="comp-item">
       <div class="tag" style="color:#34d399;">GUARD</div>
-      <p>위험 명령 1개를<br><strong>settings.json deny에 추가</strong></p>
+      <p>위험 명령 1개<br><strong>settings.json<br>deny에 추가</strong></p>
     </div>
     <div class="comp-item">
       <div class="tag" style="color:#a5b4fc;">SHARE</div>
-      <p>잘 되는 슬래시 명령 1개<br><strong>팀 레포에 커밋</strong></p>
+      <p>잘 되는 명령 1개<br><strong>팀 레포에<br>커밋</strong></p>
     </div>
   </div>
   <p class="sub" style="margin-top:3vh;">harness는 한 번에 못 만든다 &mdash; <span class="em">작업 → 룰 → 측정</span>의 사이클</p>
