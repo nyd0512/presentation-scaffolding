@@ -248,7 +248,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
       <p>실제 settings &middot; AGENTS.md</p>
     </div>
   </div>
-  <div class="note tip" style="margin-top:2vh;"><p>특정 인물의 의견이 아니라 <strong>여러 시니어 실무자가 독립적으로 도달한 공통 패턴</strong>에 초점</p></div>
+  <div class="note tip" style="margin-top:2vh;"><p>특정 인물의 의견이 아니라 <strong>여러 실무자가 독립적으로 도달한 공통 패턴</strong>에 초점</p></div>
 </div>
 
 <!-- S03 어젠다 -->
@@ -276,7 +276,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
     <span style="font-size:0.92rem;color:rgba(255,255,255,0.65);padding:1.4vh 0;border-bottom:1px solid rgba(255,255,255,0.06);text-align:right;">100% 위임 &harr; 무인 루프</span>
 
     <span style="font-size:0.78rem;color:rgba(251,146,60,0.7);letter-spacing:0.15em;padding:1.4vh 0;border-bottom:1px solid rgba(255,255,255,0.06);">06</span>
-    <span style="font-size:1.18rem;font-weight:700;color:#fff;padding:1.4vh 0;border-bottom:1px solid rgba(255,255,255,0.06);">만능론을 경계하다</span>
+    <span style="font-size:1.18rem;font-weight:700;color:#fff;padding:1.4vh 0;border-bottom:1px solid rgba(255,255,255,0.06);">만능론 경계</span>
     <span style="font-size:0.92rem;color:rgba(255,255,255,0.65);padding:1.4vh 0;border-bottom:1px solid rgba(255,255,255,0.06);text-align:right;">MCP &middot; 모델 &middot; 프롬프트</span>
 
     <span style="font-size:0.78rem;color:rgba(251,146,60,0.7);letter-spacing:0.15em;padding:1.4vh 0;border-bottom:1px solid rgba(255,255,255,0.06);">07</span>
@@ -1364,11 +1364,11 @@ cd ../feat-x &amp;&amp; claude</pre>
 <div class="slide surface">
   <h3>Harness Maturity Ladder &mdash; <span class="em">자기 위치 점검</span></h3>
   <div class="arch-layers" style="margin-top:2vh; max-width:920px;">
-    <div class="arch-layer"><div class="role" style="color:rgba(255,255,255,0.5);">Level 0</div><div class="brand">단일 agent &middot; 그냥 챗봇처럼 사용</div><div class="desc">no harness</div></div>
-    <div class="arch-layer"><div class="role" style="color:#fca5a5;">Level 1</div><div class="brand">CLAUDE.md + 기본 슬래시 명령</div><div class="desc">memory file</div></div>
-    <div class="arch-layer"><div class="role" style="color:#fbbf24;">Level 2</div><div class="brand">+ Hooks &middot; permissions &middot; custom subagent</div><div class="desc">automation</div></div>
-    <div class="arch-layer"><div class="role" style="color:#34d399;">Level 3</div><div class="brand">+ Eval &middot; cost-per-task 측정 &middot; 변경 통제</div><div class="desc">engineered</div></div>
-    <div class="arch-layer"><div class="role" style="color:#fb923c;">Level 4</div><div class="brand">+ 다중 엔진 cross-validation &middot; 장기 무인 루프 일부</div><div class="desc">advanced</div></div>
+    <div class="arch-layer"><div class="role" style="color:rgba(255,255,255,0.5);">Level 0</div><div class="brand">단일 agent &middot; 그냥 챗봇처럼 사용</div><div class="desc">하네스 없음</div></div>
+    <div class="arch-layer"><div class="role" style="color:#fca5a5;">Level 1</div><div class="brand">CLAUDE.md + 기본 슬래시 명령</div><div class="desc">메모리 파일</div></div>
+    <div class="arch-layer"><div class="role" style="color:#fbbf24;">Level 2</div><div class="brand">+ Hooks &middot; permissions &middot; custom subagent</div><div class="desc">자동화</div></div>
+    <div class="arch-layer"><div class="role" style="color:#34d399;">Level 3</div><div class="brand">+ Eval &middot; cost-per-task 측정 &middot; 변경 통제</div><div class="desc">엔지니어링</div></div>
+    <div class="arch-layer"><div class="role" style="color:#fb923c;">Level 4</div><div class="brand">+ 다중 엔진 cross-validation &middot; 장기 무인 루프 일부</div><div class="desc">고도</div></div>
   </div>
   <p class="sub" style="margin-top:2vh;">대부분 팀의 합리적 목표는 <span class="em">Level 2-3</span> &mdash; Level 4는 신규 코드베이스 + 측정 인프라 갖춰진 후</p>
 </div>
