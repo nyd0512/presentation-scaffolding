@@ -125,11 +125,12 @@ html{font-size:117%}
   .two-col{flex-direction:column;gap:2vh}
   .tbl{display:block;overflow-x:auto}
   .nav{left:20px;bottom:20px}
-  /* 인라인 grid/flex 모바일 collapse */
+  /* 인라인 grid 모바일 collapse — repeat() 패턴만 매치 (의제 grid 제외) */
   div[style*="display:grid"][style*="grid-template-columns:repeat"]{grid-template-columns:1fr!important}
-  div[style*="display:flex"][style*="gap:"]:not(.comp):not(.stat-grid):not(.two-col){flex-direction:column!important}
   /* 코드 패널 모바일 wrap */
   pre{white-space:pre-wrap;word-break:break-all}
+  /* 슬라이드 모바일 스크롤 허용 (긴 컨텐츠 클리핑 방지) */
+  .slide{overflow-y:auto}
 }
 @media(prefers-reduced-motion:reduce){
   .nav button{transition:none}
@@ -343,7 +344,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
 
 <!-- S05 정의 #1 — 운영적 정의 -->
 <div class="slide">
-  <h2 style="margin-bottom:4vh;">Harness <span class="em">Engineering</span> 이란</h2>
+  <h2 style="margin-bottom:4vh;">Harness <span class="em">Engineering</span>이란</h2>
   <div class="qcard" style="max-width:880px;">
     <p class="qtext">에이전트가 실수할 때마다,<br>그 실수를 <span class="em">다시는 못 하도록</span><br>환경에 <span class="em">영구적 해결책을 박아 넣는</span> 것</p>
   </div>
@@ -798,7 +799,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
 <!-- S26 Section 04 opener -->
 <div class="slide violet">
   <p class="meta" style="color:rgba(255,255,255,0.4);">SECTION 04</p>
-  <h1>검증과<br>멈춤 신호</h1>
+  <h1>검증과 <br>멈춤 신호</h1>
   <p class="sub">루프를 <span class="em">멈출 권리</span>는 도구에게 줘라</p>
 </div>
 
@@ -823,7 +824,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
     <tbody>
       <tr><td><strong>제품 운영자</strong></td><td>eval &middot; CI 리뷰 &middot; 자체 dogfood</td><td>출시되는 도구이므로 사용자 경로가 곧 진실</td></tr>
       <tr><td><strong>연구자</strong></td><td>사람이 line-by-line 읽기</td><td>새로운 아이디어 검증이 목적이라 자동화가 의미 없음</td></tr>
-      <tr><td><strong>코드베이스 메인테이너</strong></td><td>compiler + 타입체커 + 스냅샷 테스트</td><td>강타입 언어 (Zig/Go) 가 자동으로 거대 영역을 검증</td></tr>
+      <tr><td><strong>코드베이스 메인테이너</strong></td><td>compiler + 타입체커 + 스냅샷 테스트</td><td>강타입 언어 (Zig/Go)가 자동으로 거대 영역을 검증</td></tr>
       <tr><td><strong>회의주의 엔지니어</strong></td><td>스냅샷 테스트 &middot; 다른 엔진 리뷰</td><td>추론을 신뢰하지 않으니 외부 ground truth로</td></tr>
       <tr><td><strong>자율 루프 운영자</strong></td><td>생성된 테스트 &middot; 고정된 문서 &middot; AGENTS.md</td><td>무인 루프가 돌려면 자동 멈춤 신호가 필수</td></tr>
     </tbody>
@@ -1114,12 +1115,12 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
     <div class="stat-card">
       <div class="label">로컬 세션</div>
       <div class="value" style="color:#34d399;">5개</div>
-      <div class="source">terminal worktree 별</div>
+      <div class="source">terminal worktree별</div>
     </div>
     <div class="stat-card">
       <div class="label">웹 세션</div>
       <div class="value" style="color:#60a5fa;">5-10개</div>
-      <div class="source">브라우저 탭 별</div>
+      <div class="source">브라우저 탭별</div>
     </div>
     <div class="stat-card">
       <div class="label">모바일 세션</div>
@@ -1197,7 +1198,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
   <h3>패턴 5 &mdash; <span class="em">Cost per feature</span> 측정</h3>
   <div class="stat-grid">
     <div class="stat-card">
-      <div class="label">실 케이스</div>
+      <div class="label">실제 사례</div>
       <div class="value" style="color:#fb923c;">$15.98</div>
       <div class="source">Ghostty 자동업데이트 기능 1개</div>
     </div>
@@ -1260,7 +1261,7 @@ cd ../feat-x &amp;&amp; claude</pre>
       <p>메인테이너가 <strong>저품질 PR에 익사하지 않게</strong> &mdash; 검증된 기여자만 머지 가능한 게이트</p>
     </div>
   </div>
-  <p class="sub" style="margin-top:3vh;">하네스가 코드 베이스를 넘어 <span class="em">팀·커뮤니티 운영 정책</span>으로 확장된 사례</p>
+  <p class="sub" style="margin-top:3vh;">하네스가 코드베이스를 넘어 <span class="em">팀·커뮤니티 운영 정책</span>으로 확장된 사례</p>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════ -->
@@ -1270,7 +1271,7 @@ cd ../feat-x &amp;&amp; claude</pre>
 <!-- S53 Section 08 opener -->
 <div class="slide rose">
   <p class="meta" style="color:rgba(255,255,255,0.4);">SECTION 08</p>
-  <h1>4개 경고와<br>1개 약속</h1>
+  <h1>4개 경고와 <br>1개 약속</h1>
   <p class="sub">실무자들이 <span class="em">공통으로 명시</span>한 실패 모드</p>
 </div>
 
@@ -1435,7 +1436,7 @@ const partMap=[
   {from:34,to:39,label:'05 인간 개입 스펙트럼'},
   {from:40,to:45,label:'06 만능론을 경계하다'},
   {from:46,to:53,label:'07 실전 패턴 카탈로그'},
-  {from:54,to:58,label:'08 4개 경고 + 1개 약속'},
+  {from:54,to:58,label:'08 4개 경고와 1개 약속'},
   {from:59,to:62,label:'클로징'}
 ];
 function getPartLabel(idx){for(const p of partMap){if(idx>=p.from&&idx<=p.to)return p.label;}return 'Harness Engineering';}
